@@ -2,6 +2,8 @@
 
 mkdir src/js
 mkdir src/html
+mkdir src/_json
+mkdir src/html/_include
 mkdir gulpConfig
 mkdir src/scss
 mkdir src/scss/foundation
@@ -41,3 +43,9 @@ touch gulpConfig/jsBuild.js
 touch gulpConfig/imgBuild.js
 touch gulpConfig/localServer.js
 touch gulpConfig/sassBuild.js
+
+touch src/html/index.ejs
+touch src/html/_include/_footer.ejs
+touch src/html/_include/_head.ejs
+touch src/html/_include/_header.ejs
+touch src/_json/_meta.json

@@ -7,12 +7,10 @@ module.exports = {
     notify       : require("gulp-notify"), // エラー発生時のアラート出力
     changed      : require("gulp-changed"),
     
-    
     // html
     ejs          : require("gulp-ejs"), // esj形式でHTMLファイルを記述出来るようにする
     rename       : require("gulp-rename"), // ファイル名を変更するプラグインを追加
     beautify     : require("gulp-html-beautify"), // esjやpugで書かれたhtmlファイルをコンパイル後に整形する
-    
     
     // javascript
     babelify     : require("babelify"), // babelify は Browserify 用の Babel 変換ライブラリ
@@ -31,7 +29,6 @@ module.exports = {
     declaration  : require("css-declaration-sorter"), // プロパティをアルファベット順にソートする
     mqpacker     : require("css-mqpacker"), // メディアクエリをまとる、デスクトップファースト・モバイルファーストの出力が指定できる（postcssが必要）
     
-
     // imgmin
     imagemin     : require("gulp-imagemin"), // 画像を圧縮する
     imgMinJpg: require('imagemin-jpeg-recompress'),

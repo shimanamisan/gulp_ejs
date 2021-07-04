@@ -1,0 +1,24 @@
+{
+  "default": {
+    "id": "top",
+    "title": "タイトル",
+    "desc": "ディスクリプション",
+    "keywords": "キーワード",
+    "url": "サイトURL",
+    "css": "./css/",
+    "js": "./js/",
+    "img": "./img/",
+    "top": "./"
+  },
+  "top": {
+    "id": "top",
+    "title": "タイトル",
+    "desc": "ディスクリプション",
+    "keywords": "キーワード",
+    "url": "サイトURL",
+    "css": "./css/",
+    "js": "./js/",
+    "img": "./img/",
+    "top": "./"
+  }
+}
