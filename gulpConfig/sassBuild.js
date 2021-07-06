@@ -1,6 +1,6 @@
 const $ = require("./pulugin");
 
-
+console.log($);
 // scssファイルをコンパイル
 const sass = function (done) {
     $.gulp
