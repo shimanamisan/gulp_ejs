@@ -30,7 +30,19 @@ module.exports = {
     },
     sass: {
         src: sassSrc,
-        sidt: distPath
+        dist: sassDone
     },
+    img: {
+        src: imgMin,
+        dist: imgMinDone
+    },
+    js: {
+        src: jsMin,
+        dist: jsDone
+    },
+    server: {
+        baseDir: localServerDir,
+        mode: serverMode
+    }
     
 }

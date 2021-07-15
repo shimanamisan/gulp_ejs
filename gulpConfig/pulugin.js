@@ -6,6 +6,7 @@ module.exports = {
     gulp         : require("gulp"),
     notify       : require("gulp-notify"), // エラー発生時のアラート出力
     changed      : require("gulp-changed"),
+    requireDir   : require('require-dir'),
     
     // html
     ejs          : require("gulp-ejs"), // esj形式でHTMLファイルを記述出来るようにする
@@ -19,7 +20,6 @@ module.exports = {
     streamify    : require("gulp-streamify"), // gulpでストリームモードを利用できるようにする
     source       : require("vinyl-source-stream"), // gulpで使用するvinylオブジェクトに変換するためのもの。Browserify を扱う際に利用する
     
-    
     // sass
     sass         : require("gulp-sass"), // sassを使えるようにする
     sassGlob     : require("gulp-sass-glob"), // 複数のimport文をまとめる
@@ -30,13 +30,13 @@ module.exports = {
     mqpacker     : require("css-mqpacker"), // メディアクエリをまとる、デスクトップファースト・モバイルファーストの出力が指定できる（postcssが必要）
     
     // imgmin
-    imagemin     : require("gulp-imagemin"), // 画像を圧縮する
-    imgMinJpg: require('imagemin-jpeg-recompress'),
-    imgMinPng: require('imagemin-pngquant'),
-    imgWebP: require('gulp-webp'),
+    imgMin       : require("gulp-imagemin"), // 画像を圧縮する
+    imgMinJpg    : require('imagemin-mozjpeg'), // jpeg
+    imgMinPng    : require('imagemin-pngquant'), // png
+    imgWebP      : require('gulp-webp'),
 
     // localserver
     browserSync  : require("browser-sync"), // ファイル変更時にブラウザを自動リロードする
-    php: require('gulp-connect-php'), // browserSyncとPHPを連携させる
+    php          : require('gulp-connect-php'), // browserSyncとPHPを連携させる
     path         : require("path"), // ファイルパスやディレクトリに対して簡単にアクセス出来るような機能を提供しているモジュール
 }

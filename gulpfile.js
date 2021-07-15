@@ -1,18 +1,17 @@
-let $ = require("./gulpConfig/pulugin");
+let config = require('./gulpConfig/config')
+let $ = require('./gulpConfig/pulugin');
 
-// ディレクトリパス
-const path = {
-    src: 'src/',
-    dist: 'dist/'
-}
+$.requireDir('./gulpConfig', { recurse: true });
 
-// ejs
+
 
 
 
 // 本番環境に上げる時の処理
 
-
+//============================================================
+// watch
+//============================================================
 
 
 
