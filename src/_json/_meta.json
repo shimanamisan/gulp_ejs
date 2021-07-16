@@ -16,9 +16,9 @@
     "desc": "ディスクリプション",
     "keywords": "キーワード",
     "url": "サイトURL",
-    "css": "./css/",
-    "js": "./js/",
-    "img": "./img/",
+    "css": "css/",
+    "js": "js/",
+    "img": "img/",
     "top": "./"
   }
 }
