@@ -1,6 +1,5 @@
-
 const distPath = './dist/';
-const srcPath  = './src/';
+const srcPath = './src/';
 
 // ejs
 const ejsSrc = srcPath + 'html/**/*.ejs';
@@ -8,7 +7,7 @@ const ejsMeta = srcPath + '_json/_meta.json';
 const ejsDone = distPath;
 
 // sass
-const sassSrc = srcPath + "scss/**/*.scss";
+const sassSrc = srcPath + 'scss/**/*.scss';
 const sassDone = distPath + 'css/';
 
 // imgMin
@@ -16,7 +15,7 @@ const imgMin = srcPath + 'img/**/*.+(jpg|jpeg|png|gif|svg)';
 const imgMinDone = distPath + 'img/';
 
 // jsMin
-const jsMin = srcPath + 'js/**/*.js';
+const jsMin = srcPath + 'js/main.js';
 const jsDone = distPath + 'js/';
 
 //localServer
@@ -26,23 +25,22 @@ module.exports = {
     ejs: {
         src: ejsSrc,
         meta: ejsMeta,
-        dist: ejsDone
+        dist: ejsDone,
     },
     sass: {
         src: sassSrc,
-        dist: sassDone
+        dist: sassDone,
     },
     img: {
         src: imgMin,
-        dist: imgMinDone
+        dist: imgMinDone,
     },
     js: {
         src: jsMin,
-        dist: jsDone
+        dist: jsDone,
     },
     server: {
         baseDir: localServerDir,
-        mode: serverMode
-    }
-    
-}
+        // mode: serverMode,
+    },
+};
