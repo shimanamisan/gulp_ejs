@@ -9,9 +9,7 @@ const { serverTask } = require('./gulp/tasks/localServer');
 //============================================================
 // watch
 //============================================================
-
-
-const watch = function () {
+const watch = function (done) {
 
     // 監視するタスク
     $.gulp.watch([config.ejs.src, config.ejs.meta], $.gulp.series(ejsTask));
@@ -25,6 +23,7 @@ const watch = function () {
     $.gulp.watch(config.sass.dist).on('change', $.browserSync.reload)
     $.gulp.watch(config.js.dist).on('change', $.browserSync.reload)
 
+    done();
 }
 
 exports.default = $.gulp.series(watch, serverTask);

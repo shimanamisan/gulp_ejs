@@ -1,0 +1,8 @@
+{
+    "pageData": {
+        "index": "index",
+        "blog": "blog",
+        "contact": "contact",
+        "product_detail": "product_detail"
+    }
+}

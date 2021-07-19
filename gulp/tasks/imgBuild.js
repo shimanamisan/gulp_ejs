@@ -25,7 +25,7 @@ const imgTask = function (done) {
             ])
         )
         .pipe($.imgWebP()) // WebPの生成
-        .pipe($.gulp.dest(config.img.dist));
+        .pipe($.gulp.dest(config.dist));
 
     done();
 };

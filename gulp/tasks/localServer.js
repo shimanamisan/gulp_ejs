@@ -7,6 +7,7 @@ const serverTask = function (done) {
         open: "external",
     });
     done();
+    console.log("server start!");
 };
 
 exports.serverTask = serverTask;
