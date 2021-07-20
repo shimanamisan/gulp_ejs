@@ -7,7 +7,7 @@ const serverTask = function (done) {
         open: "external",
     });
     done();
-    console.log("server start!");
+    console.log("from localServer.js serverTask: server start!");
 };
 
 exports.serverTask = serverTask;
