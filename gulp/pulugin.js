@@ -7,6 +7,7 @@ module.exports = {
     changed      : require('gulp-changed'),
     requireDir   : require('require-dir'),
     fs           : require('fs'),
+    data         : require('gulp-data'),
 
     // html
     ejs          : require('gulp-ejs'), // esj形式でHTMLファイルを記述出来るようにする

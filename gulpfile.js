@@ -11,7 +11,7 @@ const { serverTask } = require('./gulp/tasks/localServer');
 //============================================================
 const watch = function (done) {
     // 監視するタスク
-    $.gulp.watch([config.ejs.src, config.ejs.confData], $.gulp.series(ejsTask));
+    $.gulp.watch([config.ejs.src, config.ejs.pageJson], $.gulp.series(ejsTask));
     $.gulp.watch(config.ejs.src, $.gulp.series(ejsTask));
     $.gulp.watch(config.sass.src, $.gulp.series(sassTask));
     $.gulp.watch(config.img.src, $.gulp.series(imgTask));

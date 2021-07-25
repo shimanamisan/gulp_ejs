@@ -11,9 +11,10 @@
         "top": "./"
     },
     "item": {
-      "index": "index",
-      "blog": "blog",
-      "contact": "contact",
-      "product_detail": "product_detail"
-  }
+        "index": "index",
+        "blog": "blog",
+        "contact": "contact",
+        "product": "product",
+        "product_detail": "product_detail"
+    }
 }

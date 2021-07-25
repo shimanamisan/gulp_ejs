@@ -1,23 +1,37 @@
 const ejs = require('../config').ejs;
 const $ = require('../pulugin');
-const pageData = require('../../src/_json/_config.json');
+const pageData = require('../../src/_json/_pages.json');
 
 const ejsTask = function (done) {
-    // タスクをページ毎に設定
-
-    // console.log(pageData)
+    var pageID = 0;
 
     for (key in pageData.item) {
-        console.log(ejs.confData);
-
-        let json = JSON.parse($.fs.readFileSync(ejs.confData));
+        console.log(pageData.item[key]);
+        let json = JSON.parse($.fs.readFileSync(ejs.pageJson));
         $.gulp
             .src(ejs.src)
             .pipe($.plumber({ errorHandler: $.notify.onError('Error: <%= error.message %>') }))
             .pipe(
-                $.ejs({
-                    json: json,
+                $.data((file) => {
+                    return {
+                        filename: file.path,
+                    };
                 })
+            )
+            .pipe(
+                $.ejs(
+                    {
+                        // jsonデータをテンプレートに渡す
+                        json: json,
+                        // ページ毎に読み込むテンプレートを切り替えるための識別子を渡す
+                        flagData: {
+                            ittle: pageData.item[key],
+                            id: pageID,
+                        },
+                    },
+                    // 余分な余白を削除する
+                    { rmWhitespace: true }
+                )
             )
             .pipe(
                 $.rename({
@@ -27,9 +41,8 @@ const ejsTask = function (done) {
                     extname: '.html',
                 })
             )
-            // .pipe($.rename( `${pageName[key]}.html` ))
             .pipe($.gulp.dest(ejs.dist));
-
+        pageID++;
         done();
     }
 };

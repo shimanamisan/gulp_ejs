@@ -3,7 +3,7 @@ const srcPath = './src/';
 
 // ejs
 const ejsSrc = srcPath + 'html/**/*.ejs';
-const ejsConfig = srcPath + '_json/_config.json';
+const ejsPageJson = srcPath + '_json/_pages.json';
 const ejsDone = distPath;
 
 // sass
@@ -25,7 +25,7 @@ module.exports = {
     ejs: {
         src: ejsSrc,
         dist: ejsDone,
-        confData: ejsConfig,
+        pageJson: ejsPageJson,
     },
     sass: {
         src: sassSrc,
