@@ -28,9 +28,9 @@ const ejsTask = function (done) {
                             ittle: pageData.item[key],
                             id: pageID,
                         },
-                    },
-                    // 余分な余白を削除する
-                    { rmWhitespace: true }
+                    }
+                    // // 余分な余白を削除する
+                    // { rmWhitespace: true }
                 )
             )
             .pipe(
@@ -39,6 +39,16 @@ const ejsTask = function (done) {
                     // https://www.npmjs.com/package/gulp-rename
                     basename: pageData.item[key],
                     extname: '.html',
+                })
+            )
+            // 参考：https://dezanari.com/gulp-html-beautify/
+            .pipe(
+                $.beautify({
+                    indent_size: 2,
+                    indent_char: ' ',
+                    max_preserve_newlines: 0,
+                    preserve_newlines: false,
+                    extra_liners: [],
                 })
             )
             .pipe($.gulp.dest(ejs.dist));
