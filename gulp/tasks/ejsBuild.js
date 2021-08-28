@@ -3,10 +3,9 @@ const $ = require('../pulugin');
 const pageData = require('../../src/_json/_pages.json');
 
 const ejsTask = function (done) {
-    var pageID = 0;
 
     for (key in pageData.item) {
-        console.log(pageData.item[key]);
+
         let json = JSON.parse($.fs.readFileSync(ejs.pageJson));
         $.gulp
             .src(ejs.src)
@@ -25,8 +24,7 @@ const ejsTask = function (done) {
                         json: json,
                         // ページ毎に読み込むテンプレートを切り替えるための識別子を渡す
                         flagData: {
-                            ittle: pageData.item[key],
-                            id: pageID,
+                            title: pageData.item[key],
                         },
                     }
                     // // 余分な余白を削除する
@@ -52,7 +50,6 @@ const ejsTask = function (done) {
                 })
             )
             .pipe($.gulp.dest(ejs.dist));
-        pageID++;
         done();
     }
 };

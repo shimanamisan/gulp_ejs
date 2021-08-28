@@ -1,34 +1,30 @@
 <%
 
-const top = 0;
-const blog = 1;
-const contact = 2;
-const product = 3;
-const product_detail = 4;
-
 _%> 
 
-<%- include('_include/_head') %> 
+<%- include('_include/_head') _%> 
 
-<%- include('_include/_header') %>
+<%- include('_include/_header') _%>
 
-<% if(flagData.id === 0){ _%> 
+<% console.log('index.ejs: ' + flagData.title ) _%>
+
+<% if(flagData.title === 'index'){ _%> 
     <%- include('_include/_top') _%>
 <% } _%>
 
-<% if(flagData.id === 1){ _%> 
+<% if(flagData.title === 'blog'){ _%> 
     <%- include('_include/_blog') _%>
 <% } _%>
 
-<% if(flagData.id === 2){ _%> 
+<% if(flagData.title === 'contact'){ _%> 
     <%- include('_include/_contact') _%>
 <% } _%>
 
-<% if(flagData.id === product){ _%> 
+<% if(flagData.title === 'product'){ _%> 
     <%- include('_include/_product') _%>
 <% } _%>
 
-<% if(flagData.id === product_detail){ _%> 
+<% if(flagData.title === 'product_detail'){ _%> 
     <%- include('_include/_product_detail') _%>
 <% } _%>
 

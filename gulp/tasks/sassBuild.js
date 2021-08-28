@@ -15,11 +15,11 @@ const sassTask = function (done) {
     ];
     $.gulp
         .src(config.src)
+        .pipe($.sassGlob())
         .pipe($.plumber({ errorHandler: $.notify.onError('Error:<%= error.message %>') }))
         // .pipe($.sourcemap.init()) // srsの直後に指定
         .pipe($.sass({ outputStyle: 'compressed' }).on('error', $.sass.logError))
         .pipe($.postcss(plugins))
-        .pipe($.sassGlob())
         // {outputStyle: 'compressed'} はgulp-sassのオプションで出力ファイルを圧縮している
         // https://www.npmjs.com/package/gulp-sass
         //.min.cssの拡張子にする

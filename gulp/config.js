@@ -18,6 +18,15 @@ const imgMinDone = distPath + 'img/';
 const jsMin = srcPath + 'js/main.js';
 const jsDone = distPath + 'js/';
 
+// fileCopy
+const jsCopy = {
+    movieSrc: srcPath + 'movie/*',
+    movieDist: distPath + 'movie/'
+}
+
+// fileClean
+const jsClean = distPath + '*.html'
+
 //localServer
 const localServerDir = distPath;
 
@@ -43,4 +52,9 @@ module.exports = {
         baseDir: localServerDir,
         // mode: serverMode,
     },
+    copy: {
+        movie_src: jsCopy.movieSrc,
+        movie_dist: jsCopy.movieDist
+    },
+    clean : jsClean
 };
